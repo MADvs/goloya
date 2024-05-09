@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Goloya - Character Creation</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="box" id="creatorBox">
+      <p><a href="index.html" class="b"><- Go Back</a></p>
+        <h3>CREATE YOUR CHARACTER</h3>
+        <hr>
+        <p class="r" id="errorText"></p>
+        <div class="character-form">
+            <div class="input-group">
+                <label for="nameBox"><p>Choose a name:</p></label>
+                <input type="text" id="nameBox" aria-label="Input character's name:">
+            </div>
+            <div class="input-group">
+                <p>Choose a race:</p>
+                <div class="radio-container">
+                  <div class="radio-group">
+                    <input type="radio" name="raceSelect" id="humanButton" value="human" aria-label="Human">
+                    <label for="humanButton">Human</label>
+                  </div>
+                  <div class="radio-group">
+                    <input type="radio" name="raceSelect" id="alienButton" value="alien" aria-label="Alien">
+                    <label for="alienButton">Alien</label>
+                  </div>
+                  <div class="radio-group">
+                    <input type="radio" name="raceSelect" id="droidButton" value="droid" aria-label="Droid">
+                    <label for="droidButton">Droid</label>
+                  </div>
+                  <div class="radio-group">
+                    <input type="radio" name="raceSelect" id="constructButton" value="droid" aria-label="Droid">
+                    <label for="constructButton">Construct</label>
+                  </div>
+                </div>  
+            </div>
+            <div class="input-group">
+                <p>Choose a background:</p>
+                <div class="radio-container">
+                  <div class="radio-group">
+                    <input type="radio" name="bgSelect" id="guardianButton" value="human" aria-label="Guardian">
+                    <label for="guardianButton">Guardian</label>
+                  </div>
+                  <div class="radio-group">
+                    <input type="radio" name="bgSelect" id="scholarButton" value="alien" aria-label="Scholar">
+                    <label for="scholarButton">Scholar</label>
+                  </div>
+                  <div class="radio-group">
+                    <input type="radio" name="bgSelect" id="pilotButton" value="droid" aria-label="Pilot">
+                    <label for="pilotButton">Pilot</label>
+                  </div>
+                  <div class="radio-group">
+                    <input type="radio" name="bgSelect" id="shamanButton" value="droid" aria-label="Shaman">
+                    <label for="shamanButton">Shaman</label>
+                  </div>
+                </div>  
+            </div>
+            <div class="button-box">
+              <button id="charSubmitButton" onclick="SubmitCharacter()">Submit</button>
+            </div>
+          </div>
+    </div>
+    <div class="hidden box" id="confirmBox">
+      <h3>Is this acceptable?</h3>
+      <div class="table-container">
+      <table>
+        <tr>
+          <th>NAME:</th>
+          <td><span id="myName">My Name</span></td>
+        </tr>
+        <tr>
+          <th>RACE:</th>
+          <td><span id="myRace">My Race</span></td>
+        </tr>
+        <tr>
+          <th>BACKGROUND:</th>
+          <td><span id="myBackground">My BG</td>
+        </tr>
+        <tr>
+          <th class="y">WIS:</th>
+          <td><span id="myWis">2</span></td>
+        </tr>
+        <tr>
+          <th class="b">INT:</th>
+          <td><span id="myInt">2</span></td>
+        </tr>
+        <tr>
+          <th class="r">CHA:</th>
+          <td><span id="myCha">2</span></td>
+        </tr>
+        <tr>
+          <th class="g">CON:</th>
+          <td><span id="myCon">2</span></td>
+        </tr>
+        <tr>
+          <th>MAX EP:</th>
+          <td><span id="myEp">10</span></td>
+        </tr>
+        <tr>
+          <th>MAX BP:</th>
+          <td><span id="myBp">10</span></td>
+        </tr>
+        <tr>
+          <th>AB:</th>
+          <td><span id="myAb">2</span></td>
+        </tr>
+        <tr>
+          <th>AC:</th>
+          <td><span id="myAc">50</span></td>
+        </tr>
+      </table>
+      </div>
+      <div class="button-box">
+        <button id="yesButton" onclick="ConfirmCharacter()">Yes</button>
+        <button id="noButton" onclick="window.location.reload()">No</button>
+      </div>
+    </div>
+    <script src="create.js"></script>
+  </body>
+</html>

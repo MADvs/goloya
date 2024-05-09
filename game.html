@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Goloya - How to Play</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="box" id="enemyBox">
+
+    </div>
+    <div class="box" id="logBox">
+        
+    </div>
+    <div class="box" id="userStatBox">
+        <div class="stat-table">
+            <p><span id="nameStat"></span> - <span id="raceStat"></span> <span id="bgStat"></span></p>
+            <div class="stat-table-rows">
+            <div class="column">
+                <p><span class="ly">Wisdom:</span> <span id="wisStat"></span></p>
+                <p><span class="lb">Intellect:</span> <span id="intStat"></span></p>
+                <p><span class="lr">Charisma:</span> <span id="chaStat"></span></p>
+                <p><span class="lg">Constitution:</span> <span id="conStat"></span></p>
+            </div>
+            <div class="column">
+                <p class="ly">Endurance: <span id="currentEpStat"></span> / <span id="maxEpStat"></span></p>
+                <p class="lb">Battery: <span id="currentBpStat"></span> / <span id="maxBpStat"></span></p>
+                <p class="lr">Attack Bonus: <span id="abStat"></span></p>
+                <p class="lg">Armor Class: <span id="acStat"></span></p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
