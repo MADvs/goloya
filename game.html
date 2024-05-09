@@ -8,29 +8,49 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="box" id="enemyBox">
-
-    </div>
-    <div class="box" id="logBox">
-        
-    </div>
-    <div class="box" id="userStatBox">
-        <div class="stat-table">
-            <p><span id="nameStat"></span> - <span id="raceStat"></span> <span id="bgStat"></span></p>
-            <div class="stat-table-rows">
-            <div class="column">
-                <p><span class="ly">Wisdom:</span> <span id="wisStat"></span></p>
-                <p><span class="lb">Intellect:</span> <span id="intStat"></span></p>
-                <p><span class="lr">Charisma:</span> <span id="chaStat"></span></p>
-                <p><span class="lg">Constitution:</span> <span id="conStat"></span></p>
+    <div class="gui">
+        <div class="box" id="enemyBox">
+            <div class="stat-table">
+                <p><span id="enemyName"></p>
+                <div class="stat-table-rows">
+                <div class="column">
+                    <p class="ly">Endurance: <span id="enemyCurrentEp"></span> / <span id="enemyMaxEp"></span></p>
+                    <p class="lb">Battery: <span id="enemyCurrentBp"></span> / <span id="enemyMaxBp"></span></p>
+                </div>
+                </div>
             </div>
-            <div class="column">
-                <p class="ly">Endurance: <span id="currentEpStat"></span> / <span id="maxEpStat"></span></p>
-                <p class="lb">Battery: <span id="currentBpStat"></span> / <span id="maxBpStat"></span></p>
-                <p class="lr">Attack Bonus: <span id="abStat"></span></p>
-                <p class="lg">Armor Class: <span id="acStat"></span></p>
+        </div>
+        <div class="box" id="logBox">
+            <p id="gameLog">This is the game log.</p>
+        </div>
+        <div class="my-info">
+        <div class="box" id="userMoveBox">
+            <div class="button-box">
+                <button class="spell-button" id="spellButton1">Spell 1</button>
+                <button class="spell-button" id="spellButton2">Spell 2</button>
+                <button class="spell-button" id="spellButton3">Spell 3</button>
+                <button class="spell-button" id="spellButton4">Spell 4</button>
             </div>
+        </div>
+        <div class="box" id="userStatBox">
+            <div class="stat-table">
+                <p><span id="nameStat"></span> - <span id="raceStat"></span> <span id="bgStat"></span></p>
+                <div class="stat-table-rows">
+                <div class="column">
+                    <p><span class="ly">Wisdom:</span> <span id="wisStat"></span></p>
+                    <p><span class="lb">Intellect:</span> <span id="intStat"></span></p>
+                    <p><span class="lr">Charisma:</span> <span id="chaStat"></span></p>
+                    <p><span class="lg">Constitution:</span> <span id="conStat"></span></p>
+                </div>
+                <div class="column">
+                    <p class="ly">Endurance: <span id="currentEpStat"></span> / <span id="maxEpStat"></span></p>
+                    <p class="lb">Battery: <span id="currentBpStat"></span> / <span id="maxBpStat"></span></p>
+                    <p class="lr">Attack Bonus: <span id="abStat"></span></p>
+                    <p class="lg">Armor Class: <span id="acStat"></span></p>
+                </div>
+                </div>
             </div>
+        </div>
         </div>
     </div>
     <script src="game.js"></script>

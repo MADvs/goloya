@@ -9,6 +9,12 @@ const wisText = document.getElementById('wisStat');
 const intText = document.getElementById('intStat');
 const chaText = document.getElementById('chaStat');
 const conText = document.getElementById('conStat');
+const currentEpText = document.getElementById('currentEpStat');
+const maxEpText = document.getElementById('maxEpStat');
+const currentBpText = document.getElementById('currentBpStat');
+const maxBpText = document.getElementById('maxBpStat');
+const abText = document.getElementById('abStat');
+const acText = document.getElementById('acStat');
 
 nameText.innerHTML = user.name;
 raceText.innerHTML = user.race;
@@ -17,6 +23,12 @@ wisText.innerHTML = user.wis;
 intText.innerHTML = user.int;
 chaText.innerHTML = user.cha;
 conText.innerHTML = user.con;
+currentEpText.innerHTML = user.ep.current;
+maxEpText.innerHTML = user.ep.max;
+currentBpText.innerHTML = user.bp.current;
+maxBpText.innerHTML = user.bp.max;
+abText.innerHTML = user.ab;
+acText.innerHTML = user.ac + "%";
 
 
 

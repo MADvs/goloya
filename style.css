@@ -135,6 +135,7 @@ body {
 .button-box {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin: 5vw 0;
 }
 #yesButton {background-color: darkgreen}
@@ -148,6 +149,11 @@ button, .button {
     font-size: calc(1rem + 5vw);
     font-family: Pixel;
     padding: 3vw 5vw
+}
+
+.spell-button {
+    font-size: calc(1rem + 3vw);
+    width: 50%;
 }
 
 button:hover {
@@ -221,8 +227,16 @@ table th, table td {
 }
 
 /* GAME GUI */
+.gui {
+    height: 100dvh;
+    margin: -6px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .stat-table-rows {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
