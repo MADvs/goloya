@@ -1,15 +1,17 @@
+* {margin: 0; padding: 0;}
+
 /*/ --- VARIABLES --- */
 :root {
     --red: #E53A32;
-    --lightred: #FFCDD4;
+    --lightred: #ff6076;
     --orange: #EE831C;
     --lightorange: #FFE1B2;
     --yellow: #FFEC3D;
-    --lightyellow: #FFFDC4;
+    --lightyellow: #fffb84;
     --green: #00E777;
-    --lightgreen: #C9E7CB;
+    --lightgreen: #82ff8a;
     --blue: #3D8FFE;
-    --lightblue: #DFF9FA;
+    --lightblue: #71faff;
     --purple: #AA47BC;
     --lightpurple: #E2BFE9;
     --pink: #EA62FF;
@@ -48,40 +50,19 @@
 }
 
 /* --- ANIMATIONS --- */
-@keyframes glowYellow {
+@keyframes buttonHover {
     0% {}
-    50% {color: var(--yellow);}
-    100%{}
+    100% {background-color: #5f5f5f;}
 }
 
-@keyframes glowRed {
+@keyframes buttonHoverRed {
     0% {}
-    50% {color: var(--red);}
-    100%{}
+    100% {background-color: var(--red);}
 }
 
-@keyframes glowBlue {
+@keyframes buttonHoverGreen {
     0% {}
-    50% {color: var(--blue);}
-    100%{}
-}
-
-@keyframes glowGreen {
-    0% {}
-    50% {color: var(--green);}
-    100% {}
-}
-
-@keyframes glowGray {
-    0% {}
-    50% {color: #5f5f5f}
-    100% {}
-}
-
-@keyframes glowRedAndBlue {
-    0% {color: var(--red)}
-    50% {color: var(--blue)}
-    100% {color: var(--red)}
+    100% {background-color: var(--green);}
 }
 
 @keyframes fadeUp {
@@ -94,42 +75,33 @@ body {
     color: white;
     font-family: Pixel;
     overflow-x: hidden;
+    background-image: url(/images/backgrounds/grass03-min.webp);
 }
 @media screen and (max-width: 320px) {body {display: none;}}
-@media screen and (min-width: 0px) {body {background-image: url(/images/backgrounds/background360.webp)}}
-@media screen and (min-width: 360px) {body {background-image: url(/images/backgrounds/background480.webp)}}
-@media screen and (min-width: 480px) {body {background-image: url(/images/backgrounds/background768.webp)}}
-@media screen and (min-width: 768px) {body {background-image: url(/images/backgrounds/background992.webp)}}
-@media screen and (min-width: 992px) {body {background-image: url(/images/backgrounds/background.webp);}}
 
 /* --- BASIC BOX  --- */
 .box {
-    background-color: #0f0f0f;
-    padding: 5%;
+    background-color: #1f1f1f;
+    padding: 30px;
     margin: 1rem;
-    border: 2px solid white;
+    border: 3px solid green;
     animation: fadeUp 1s;
 }
 
 .box h3, .box p {
     text-align: center;
+    animation: fadeUp 2s;
+    margin: 2vh;
 }
 
 .box h3 {
     font-family: Adventure;
-    font-size: calc(1.5rem + 1vw);
+    font-size: calc(1.3rem + 1vw);
 }
 
 .box p {
     font-size: calc(1rem + 1vw);
 }
-
-/* --- WELCOME BOX  --- */
-.welcome-box h3, .welcome-box p, .welcome-box a {
-    animation: fadeUp 2s;
-}
-
-.glow {animation: glowRedAndBlue 5s ease-in-out infinite;}
 
 /* --- BUTTONS --- */
 .button-box {
@@ -138,27 +110,22 @@ body {
     flex-wrap: wrap;
     margin: 5vw 0;
 }
-#yesButton {background-color: darkgreen}
-#noButton {background-color: darkred}
-#yesButton:hover {background-color: var(--green)}
-#noButton:hover {background-color: var(--red)}
 
 button, .button {
-    background-color: #1f1f1f;
+    background-color: #2f2f2f;
     color: white;
     font-size: calc(1rem + 5vw);
     font-family: Pixel;
     padding: 3vw 5vw
 }
-
-.spell-button {
-    font-size: calc(1rem + 3vw);
-    width: 50%;
-}
+#yesButton {background-color: darkgreen}
+#noButton {background-color: darkred}
 
 button:hover {
-    background-color: #5f5f5f;
+    animation: buttonHover 0.5s forwards;
 }
+#yesButton:hover {animation: buttonHoverGreen 0.5s forwards;}
+#noButton:hover {animation: buttonHoverRed 0.5s forwards;}
 
 /* --- CHARACTER CREATE FORM  --- */
 .character-form p {
@@ -201,18 +168,25 @@ input[type="text"] {
     justify-content: center;
 }
 
+.table-container {
+    flex-direction: column;
+}
+
+.table-container p {
+    font-size: calc(1em + 2vh);
+}
+
 input[type="radio"] {
     transform: scale(1.8);
 }
 
-#humanButton, #alienButton, #droidButton, #constructButton {accent-color: var(--teal);}
-#guardianButton {accent-color: var(--yellow);}
-#scholarButton {accent-color: var(--blue);}
-#pilotButton {accent-color: var(--red);}
-#shamanButton {accent-color: var(--green);}
+#dwarfButton, #abjButton {accent-color: var(--yellow);}
+#elfButton, #divButton {accent-color: var(--blue);}
+#humanButton, #evoButton {accent-color: var(--red);}
+#constructButton, #traButton {accent-color: var(--green);}
 
 table {
-    font-size: calc(1em + 1vw);
+    font-size: calc(1.5em + 2vw);
     width: 100%;
     background-color: #1f1f1f;
 }
@@ -220,23 +194,58 @@ table {
 table th {
     padding: 3vw 0;
     font-weight: 100;
+    text-align: left;
 }
 
-table th, table td {
-    text-align: center;
+table td {
+    text-align: right;
 }
 
 /* GAME GUI */
 .gui {
-    height: 100dvh;
+    height: 99dvh;
     margin: -6px;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
-.stat-table-rows {
+
+.spell-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.slot {
+    font-size: calc(1em + 3vw);
+    text-align: center;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px 5px;
+}
+.slot h4 {
+    font-weight: 100;
+}
+.slot:hover {
+    cursor: pointer;
+}
+
+.abj {background-color: rgb(172, 172, 39);}
+.div {background-color: rgb(63, 63, 190);}
+.evo {background-color: rgb(177, 54, 54);}
+.tra {background-color: rgb(32, 129, 32);}
+.abj:hover {animation: none; background-color: var(--yellow);}
+.div:hover {animation: none; background-color: var(--blue);}
+.evo:hover {animation: none; background-color: var(--red);}
+.tra:hover {animation: none; background-color: var(--green);}
+
+.info-box {padding: 0;}
+
+.info-row {
+    display: flex;
+    justify-content: center;
 }

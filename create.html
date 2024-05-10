@@ -26,37 +26,37 @@
                     <label for="humanButton">Human</label>
                   </div>
                   <div class="radio-group">
-                    <input type="radio" name="raceSelect" id="alienButton" value="alien" aria-label="Alien">
-                    <label for="alienButton">Alien</label>
+                    <input type="radio" name="raceSelect" id="elfButton" value="elf" aria-label="Elf">
+                    <label for="alienButton">Elf</label>
                   </div>
                   <div class="radio-group">
-                    <input type="radio" name="raceSelect" id="droidButton" value="droid" aria-label="Droid">
-                    <label for="droidButton">Droid</label>
+                    <input type="radio" name="raceSelect" id="dwarfButton" value="dwarf" aria-label="Dwarf">
+                    <label for="droidButton">Dwarf</label>
                   </div>
                   <div class="radio-group">
-                    <input type="radio" name="raceSelect" id="constructButton" value="droid" aria-label="Droid">
+                    <input type="radio" name="raceSelect" id="constructButton" value="construct" aria-label="Construct">
                     <label for="constructButton">Construct</label>
                   </div>
                 </div>  
             </div>
             <div class="input-group">
-                <p>Choose a background:</p>
+                <p>Choose a school:</p>
                 <div class="radio-container">
                   <div class="radio-group">
-                    <input type="radio" name="bgSelect" id="guardianButton" value="human" aria-label="Guardian">
-                    <label for="guardianButton">Guardian</label>
+                    <input type="radio" name="schoolSelect" id="abjButton" value="human" aria-label="Abjuration">
+                    <label for="guardianButton">Abjuration</label>
                   </div>
                   <div class="radio-group">
-                    <input type="radio" name="bgSelect" id="scholarButton" value="alien" aria-label="Scholar">
-                    <label for="scholarButton">Scholar</label>
+                    <input type="radio" name="schoolSelect" id="divButton" value="alien" aria-label="Divination">
+                    <label for="scholarButton">Divination</label>
                   </div>
                   <div class="radio-group">
-                    <input type="radio" name="bgSelect" id="pilotButton" value="droid" aria-label="Pilot">
-                    <label for="pilotButton">Pilot</label>
+                    <input type="radio" name="schoolSelect" id="evoButton" value="droid" aria-label="Evocation">
+                    <label for="pilotButton">Evocation</label>
                   </div>
                   <div class="radio-group">
-                    <input type="radio" name="bgSelect" id="shamanButton" value="droid" aria-label="Shaman">
-                    <label for="shamanButton">Shaman</label>
+                    <input type="radio" name="schoolSelect" id="traButton" value="droid" aria-label="Transmutation">
+                    <label for="shamanButton">Transmutation</label>
                   </div>
                 </div>  
             </div>
@@ -68,50 +68,43 @@
     <div class="hidden box" id="confirmBox">
       <h3>Is this acceptable?</h3>
       <div class="table-container">
+        <p id="myName">Name</p>
       <table>
         <tr>
-          <th>NAME:</th>
-          <td><span id="myName">My Name</span></td>
+          <th><span id="mySchool">School</span></th>
+          <td><span id="myRace">Race</span></td>
         </tr>
-        <tr>
-          <th>RACE:</th>
-          <td><span id="myRace">My Race</span></td>
-        </tr>
-        <tr>
-          <th>BACKGROUND:</th>
-          <td><span id="myBackground">My BG</td>
-        </tr>
-        <tr>
-          <th class="y">WIS:</th>
+        <tr class="ly">
+          <th>Wisdom:</th>
           <td><span id="myWis">2</span></td>
         </tr>
-        <tr>
-          <th class="b">INT:</th>
+        <tr class="lb">
+          <th>Intellect:</th>
           <td><span id="myInt">2</span></td>
         </tr>
-        <tr>
-          <th class="r">CHA:</th>
+        <tr class="lr">
+          <th>Charisma:</th>
           <td><span id="myCha">2</span></td>
         </tr>
-        <tr>
-          <th class="g">CON:</th>
+        <tr class="lg">
+          <th>Constitution:</th>
           <td><span id="myCon">2</span></td>
         </tr>
-        <tr>
-          <th>MAX EP:</th>
+        <tr class="ly">
+          <th>Endurance:</th>
           <td><span id="myEp">10</span></td>
         </tr>
-        <tr>
-          <th>MAX BP:</th>
-          <td><span id="myBp">10</span></td>
+        <tr class="lb">
+          <th>Mana:</th>
+          <td><span id="myMp">10</span></td>
         </tr>
-        <tr>
-          <th>AB:</th>
+        <tr class="lr">
+          <th>Attack Bonus:</th>
           <td><span id="myAb">2</span></td>
         </tr>
-        <tr>
-          <th>AC:</th>
-          <td><span id="myAc">50</span></td>
+        <tr class="lg">
+          <th>Armor Class:</th>
+          <td><span id="myAc">50</span>%</td>
         </tr>
       </table>
       </div>

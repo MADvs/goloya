@@ -11,8 +11,8 @@ const chaText = document.getElementById('chaStat');
 const conText = document.getElementById('conStat');
 const currentEpText = document.getElementById('currentEpStat');
 const maxEpText = document.getElementById('maxEpStat');
-const currentBpText = document.getElementById('currentBpStat');
-const maxBpText = document.getElementById('maxBpStat');
+const currentMpText = document.getElementById('currentMpStat');
+const maxMpText = document.getElementById('maxMpStat');
 const abText = document.getElementById('abStat');
 const acText = document.getElementById('acStat');
 

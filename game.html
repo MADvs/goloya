@@ -4,55 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Goloya - How to Play</title>
+    <title>Goloya - Game</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="gui">
-        <div class="box" id="enemyBox">
-            <div class="stat-table">
-                <p><span id="enemyName"></p>
-                <div class="stat-table-rows">
-                <div class="column">
-                    <p class="ly">Endurance: <span id="enemyCurrentEp"></span> / <span id="enemyMaxEp"></span></p>
-                    <p class="lb">Battery: <span id="enemyCurrentBp"></span> / <span id="enemyMaxBp"></span></p>
-                </div>
-                </div>
+        <div class="box info-box" id="myInfoBox">
+            <p><span id="myName">Name</span> - <span id="myRace">Race</span> <span id="mySchool">School</span></p>
+            <div class="info-row">
+                <p class="ly">Endurance: <span id="myCurrentEP">10</span> / <span id="myMaxEP">10</span></p>
+                <p class="lb">Mana: <span id="MyCurrentMP">10</span> / <span id="myMaxMP">10</span></p>
             </div>
+
         </div>
-        <div class="box" id="logBox">
-            <p id="gameLog">This is the game log.</p>
+        <div class="box spell-box" id="mySpellBox">
+            <div class="slot"><h4 id="slot1Text">Healing Light</h4></div>
+            <div class="slot"><h4 id="slot2Text">Divination</h4></div>
+            <div class="slot"><h4 id="slot3Text">Fire Blast</h4></div>
+            <div class="slot"><h4 id="slot4Text">Meditation</h4></div>
         </div>
-        <div class="my-info">
-        <div class="box" id="userMoveBox">
-            <div class="button-box">
-                <button class="spell-button" id="spellButton1">Spell 1</button>
-                <button class="spell-button" id="spellButton2">Spell 2</button>
-                <button class="spell-button" id="spellButton3">Spell 3</button>
-                <button class="spell-button" id="spellButton4">Spell 4</button>
-            </div>
-        </div>
-        <div class="box" id="userStatBox">
-            <div class="stat-table">
-                <p><span id="nameStat"></span> - <span id="raceStat"></span> <span id="bgStat"></span></p>
-                <div class="stat-table-rows">
-                <div class="column">
-                    <p><span class="ly">Wisdom:</span> <span id="wisStat"></span></p>
-                    <p><span class="lb">Intellect:</span> <span id="intStat"></span></p>
-                    <p><span class="lr">Charisma:</span> <span id="chaStat"></span></p>
-                    <p><span class="lg">Constitution:</span> <span id="conStat"></span></p>
-                </div>
-                <div class="column">
-                    <p class="ly">Endurance: <span id="currentEpStat"></span> / <span id="maxEpStat"></span></p>
-                    <p class="lb">Battery: <span id="currentBpStat"></span> / <span id="maxBpStat"></span></p>
-                    <p class="lr">Attack Bonus: <span id="abStat"></span></p>
-                    <p class="lg">Armor Class: <span id="acStat"></span></p>
-                </div>
-                </div>
-            </div>
-        </div>
-        </div>
+
     </div>
-    <script src="game.js"></script>
+    <script src="gui.js"></script>
   </body>
 </html>
